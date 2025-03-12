@@ -1,0 +1,118 @@
+ @import url('https://fonts.cdnfonts.com/css/calculator');
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+.calculator {
+  width: 320px;
+  background-color: #333;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.calculator-display {
+  font-family: 'Calculator', sans-serif;                    
+  background-color: #222;
+  color: white;
+  padding: 20px;
+  text-align: right;
+  font-size: 24px;
+  min-height: 60px;
+  position: relative;
+  
+  > span {
+    color:  #ffd800;
+  }
+}
+
+.expression {
+  font-size: 16px;
+  color: #aaa;
+  height: 20px;
+  margin-bottom: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#display {
+  font-size: 36px;
+  font-weight: 300;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.calculator-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1px;
+  background-color: #444;
+}
+
+.calculator-button {
+  border: none;
+  font-size: 24px;
+  padding: 20px;
+  cursor: pointer;
+  background-color: #555;
+  color: white;
+  transition: background-color 0.2s;
+  outline: none;
+}
+
+.calculator-button:hover {
+  background-color: #666;
+}
+
+.calculator-button:active {
+  background-color: #777;
+}
+
+.wide {
+  grid-column: span 2;
+}
+
+.equals {
+  grid-row: span 2;
+  background-color: #ff9500;
+}
+
+.equals:hover {
+  background-color: #ffab40;
+}
+
+.equals:active {
+  background-color: #e68a00;
+}
+
+.operator {
+  background-color: #ff9500;
+}
+
+.operator:hover {
+  background-color: #ffab40;
+}
+
+.operator:active {
+  background-color: #e68a00;
+}
+
+/* Add media query for mobile devices */
+@media (max-width: 360px) {
+  .calculator {
+    width: 100%;
+    border-radius: 0;
+  }
+  
+  .calculator-button {
+    padding: 15px;
+  }
+}
